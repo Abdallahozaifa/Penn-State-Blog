@@ -1,0 +1,77 @@
+
+<div class="post">
+  <div class="post-heading">
+    <div class="post-title">
+      {{p.subject}}
+    </div>
+
+    <div class="post-who">
+      Posted by {{username.capitalize()}} at {{p.created.strftime("%b %d, %Y")}}
+    </div>
+  </div>
+  <div>
+    
+  </div>
+  <div class="post-content">
+    <img src="../static/images/blogpost.jpg" class="img-post"> {{p._render_text | safe}}
+  </div>
+</div>
+
+
+
+<!--
+<div class="post hentry">
+<a name="183171007438718157"></a>
+<h3 class="post-title entry-title">
+{{p.subject}}
+</h3>
+<div class="post-header">
+<div class="post-header-line-1">
+<span class="post-author vcard">
+Posted by
+<span class="fn">
+<a href="https://www.blogger.com/profile/12379086363603967844" rel="author" title="author profile">
+{{username}}
+</a>
+</span>
+</span>
+<span class="post-timestamp">
+at
+<a class="timestamp-link" href="http://blackandwhite3-btemplates.blogspot.com/2012/05/lorem-ipsum_122.html" rel="bookmark" title="permanent link"><abbr class="published" title="2012-05-25T19:31:00-07:00">{{p.created.strftime("%b %d, %Y")}}</abbr></a>
+</span>
+</div></div>
+<div class="post-body entry-content" id="post-body-183171007438718157">
+<div id="summary183171007438718157"><span style="float:left; padding:0px 10px 5px 0px;"><img src="http://lh3.googleusercontent.com/_Zuzii37VUO4/Ta0nUeMwXoI/AAAAAAAAFoc/7f0Um7OTgNg/s000/Antartic-by-Peter-Rejcek.jpg" width="140px" height="110px"></span><div>
+{{p._render_text | safe}}</div></div>
+<script type="text/javascript"> 
+createSummaryAndThumb("summary183171007438718157"); 
+</script>
+<div style="clear: both;"></div>
+<div style="clear: both;"></div>
+</div>-->
+
+      
+<!--
+
+
+<div class="post">
+  <div class="post-heading">
+    <div class="post-title">
+      {{p.subject}}
+    </div>
+
+    <div class="post-date">
+      {{p.created.strftime("%b %d, %Y")}}
+    </div>
+
+    <div class="post-who">
+      Submitted by {{username}}
+    </div>
+  </div>
+
+  <div class="post-content">
+    {{p._render_text | safe}}
+  </div
+</div>
+
+-->    

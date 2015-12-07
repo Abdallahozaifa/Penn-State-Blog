@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html class="loginpage">
+  <head>
+    <link type="text/css" rel="stylesheet" href="/static/main.css"/>
+    <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+    <title>Login</title>
+  </head>
+
+  <body class="loginbody">
+      <h1 class="loginlogo">Ready to login!</h1>
+      <form method="post" class="loginform">
+        <fieldset class="account-info">
+          <label>
+            Username
+            <input type="text" name="username" value="{{username}}" placeholder="username">
+          </label>
+
+          <label>
+            Password
+            <input type="password" name="password" value="" placeholder="password">
+          </label>
+
+        </fieldset>
+
+        <div class="error">
+          {{error}}
+        </div>
+
+        <fieldset class="account-action">
+          <input class="btn" type="submit" value="Login">
+        </fieldset>
+      </form>
+    
+  </body>
+
+</html>
+
+<!--
+  
+
+  -->

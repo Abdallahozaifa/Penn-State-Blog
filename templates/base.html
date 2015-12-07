@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html class="sidepicture">
+<head>
+  <link type="text/css" rel="stylesheet" href="/static/main.css"/>
+  <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+  <title>Hozaifa's Blog</title>
+</head>
+
+<body class="blogbody">
+    
+  <nav class="navigation">
+    <ul>
+      <li><a href="/welcome">Home</a></li><!--
+      --><li><a href="/">Blog</a></li><!--
+      --><li><a href="/newpost">New Post</a></li><!--
+      -->{% if user %}
+            <li class='/logout'><a href='/logout'><span>{{user.name}} Logout</span></a></li>
+         {% else %}
+            <li class='last'><a href='/login'><span>Login</span></a></li><!--
+            --><li class='last'><a href='/signup'><span>Signup</span></a></li>
+         {% endif %}
+    </ul>
+  </nav>
+
+  <a href="/" class="main-title">
+    What's going on around campus?
+  </a>
+  
+  <!--
+  <div class="login-area">
+    {% if user %}
+      {{user.name}} (<a class="login-link" href="/logout">logout</a>)
+    {% else %}
+      <a class="login-link" href="/login">login</a>
+      |
+      <a class="login-link" href="/signup">signup</a>
+    {% endif %}
+  </div>-->
+
+  <div id="content">
+  {% block content %}
+  {% endblock %}
+  </div>
+</body>
+
+</html>
+

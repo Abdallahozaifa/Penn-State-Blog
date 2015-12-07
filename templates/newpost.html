@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html class="newpostpage">
+  <head>
+    <title>Hozaifa's Signup</title>
+    <link type="text/css" rel="stylesheet" href="/static/main.css"/>
+    <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+  </head>
+
+  <body class="newpostbody">
+    <nav class="navigation welcome">
+    <ul>
+      <li><a href="/welcome">Home</a></li><!--
+      --><li><a href="/">Blog</a></li><!--
+      --><li><a href="/newpost">New Post</a></li><!--
+      -->{% if user %}
+            <li class='/logout'><a href='/logout'><span>{{user.name}} Logout</span></a></li>
+         {% else %}
+            <li class='last'><a href='/login'><span>Login</span></a></li><!--
+            --><li class='last'><a href='/signup'><span>Signup</span></a></li>
+         {% endif %}
+    </ul>
+  </nav>
+      <div class="newpost-intro">
+        <h2 class="welcomeusername">New Post</h2>
+        <p>Hello there, in order to add a new post to the blog you will need to enter a subject and post down below. All posts are monitored so be 
+          considerate of your posts. Enjoy the blog and post away!!</p>
+      </div>
+
+        <div >
+          <form method="post" class="newpostform">
+            <div>
+            <label>
+              <div class="newpostform-title">Subject</div>
+              <input class="newpostform-subject" type="text" name="subject" value="{{subject}}">
+            </label>
+
+            <label>
+              <div class="newpostform-title">Blog</div>
+              <textarea name="content">{{content}}</textarea>
+            </label>
+            
+            <div class="error">{{error}}</div>
+
+            <input class="newpost-btn" type="submit" value="Submit">
+          </div>
+          </form>
+        </div>
+    </body>
+    </html>
+

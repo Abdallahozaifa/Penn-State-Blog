@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html class="welcomepage">
+  <head>
+    <title>Hozaifa's Signup</title>
+    <link type="text/css" rel="stylesheet" href="/static/main.css"/>
+    <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+  </head>
+
+  <body class="welcomebody">
+      <nav class="navigation welcome">
+          <ul>
+            <li><a href="/welcome">Home</a></li><!--
+            --><li><a href="/">Blog</a></li><!--
+            --><li><a href="/newpost">New Post</a></li><!--
+            -->{% if user %}
+                  <li class='/logout'><a href='/logout'><span>{{user.name}} Logout</span></a></li>
+               {% else %}
+                  <li class='last'><a href='/login'><span>Login</span></a></li><!--
+                  --><li class='last'><a href='/signup'><span>Signup</span></a></li>
+               {% endif %}
+          </ul>
+      </nav>
+    <h2 class="welcomeusername">Welcome, {{username.capitalize()}}!</h2>
+    <p>Welcome to Hozaifa's campus events blog. This blog was created by Hozaifa Abdalla from scratch using one of the google cloud platform services called google app engine.
+    This service includes this platform where students can sign up and blog about the various campus events that are happening around campus. If there is an awesome campus event that is going on, feel free to blog about it.</p>
+    
+    <h2 class="congrats-msg">Congratulations {{username.capitalize()}} for signing up, I hope this is a pleasurable experience!</h2>
+  </body>
+</html>
